@@ -1,0 +1,425 @@
+library(readxl)
+Ct_for_FFPE_for_heatmap <- read_excel("C:/Users/smandal/Downloads/Ct for FFPE for heatmap.xlsx")
+View(Ct_for_FFPE_for_heatmap)
+head(Ct_for_FFPE_for_heatmap)
+str(Ct_for_FFPE_for_heatmap)
+summary(Ct_for_FFPE_for_heatmap)
+ffpdata<-Ct_for_FFPE_for_heatmap
+library(gplots)
+library(heatmap.plus)
+library(RColorBrewer)
+ffpmatrix<-as.matrix(t.ffpdata)
+ffpmatrix<-as.matrix(t(ffpdata))
+heatmap.2(ffpmatrix)
+ffpmatrix
+strffpdata
+str(ffpdata)
+ffpdata<-ffpdata[.c(3:43)]
+ffpdata<-ffpdata[.-cell.Mir]
+ffpdata<-ffpdata[.-2]
+ffpdatanew<-ffpdata[-1,2]
+names(ffpdatanew)
+str(ffpdatanew)
+ffpmatrix<-as.matrix(ffpdatanew)
+heatmap.2(ffpmatrix)
+library(gplots)
+library(RColorBrewer)
+heatmap.2(ffpmatrix)
+library(gplots)
+ffpdatanew
+ffpdata
+y<-data.matrix(ffpdata)
+heatmap.2(y)
+y<-data.matrix(ffpdatanew)
+heatmap.2(y)
+y
+library(readxl)
+dataset <- read_excel(NULL)
+View(dataset)
+heatmap.2 (y,
+heatmap.2 (y,
+Rowv = TRUE,
+Colv= TRUE,
+distfun = dist,
+hclustfun = hclust,
+dendrogram = c("both","row","column","none"),
+reorderfun = function(d, w) reorder(d, w),
+symm = FALSE,
+scale = c("none","row", "column"),
+na.rm=TRUE,
+revC = identical(Colv, "Rowv"),
+add.expr,
+breaks,
+symbreaks=any(x < 0, na.rm=TRUE) || scale!="none",
+col="heat.colors",
+colsep,
+rowsep,
+sepcolor="white",
+)
+ffpdata<-ffpdata[.c(3:43)]
+head(ffpdata)
+warnings()
+row.names(ffpdata)<-ffpdata$Mir
+library(readxl)
+Ct_for_FFPE_for_heatmap_new <- read_excel("C:/Users/smandal/Downloads/Ct for FFPE for heatmap_new.xlsx")
+View(Ct_for_FFPE_for_heatmap_new)
+ffp<-Ct_for_FFPE_for_heatmap_new
+y<-data.matrix(ffp)
+heatmap.2(y)
+row.names(ffp)<-ffp$Mir
+head
+head(ffp)
+ffp<-ffp[1:13,-1]
+y<-data.matrix(ffp)
+y
+heatmap.2(y)
+ffp
+Ct_for_FFPE_for_heatmap_new <- read_excel("C:/Users/smandal/Downloads/Ct for FFPE for heatmap_new.xlsx")
+ffpm<-Ct_for_FFPE_for_heatmap_new
+ffpm
+row.names(ffpm)<-ffpm$Mir
+ffpm
+ffpm<-ffpm[1:13.-1]
+ffpm
+head(ffpm)
+str(ffpm)
+View(ffpm)
+ffpm<-ffpm[2.43]
+ffpm
+ffpn<-Ct_for_FFPE_for_heatmap_new
+row.names(ffpn)<-ffpn$Mir
+ffpn
+View(ffpn)
+ffpn<-ffpn[1:42,-1]
+y<-data.matrix(ffpn)
+library(gplots)
+library(heatmap.plus)
+library(RColorBrewer)
+heatmap.2(y)
+ffpn<-ffpn[1:13]
+ffpn<-[,1:13]
+ffpn1<-Ct_for_FFPE_for_heatmap_new
+View(ffpn1)
+row.names(ffpn1)<-ffpn1$Mir
+View(ffpn1)
+ffpn1<ffpn1[c(2:42)]
+ffpn1<-ffpn1[c(2:42)]
+library(RColorBrewer)
+library(heatmap.plus)
+library(gplots)
+y<-data.matrix(ffpn1)
+heatmap.2(y)
+y<-data.matrix(t(ffpn1))
+input<-as.matrix(t(ffpn1)
+)
+heatmap.2(input)
+library(RColorBrewer)
+library(heatmap.plus)
+library(gplots)
+logffpn1<-log10(ffpn1+1)
+plot(logffpn1)
+par(oma=c(1,15,1,1))
+heatmap.2(y)
+heatmap.2(y, key=TRUE, keysize=1.5, key.xlab="X-axis", key.ylab="", key.title="", key.par=list(mar=c(4,0,1,2), cex=1.0, cex.lab=2.0, cex.axis=2.0), margins=c(5,5))
+heatmap.2(logffpn1,col = 75)
+logy<-log10(y+1)
+plot(logy)
+heatmap.2(logy)
+par(oma=c(1,15,1,1))
+heatmap.2(logy)
+sclogy<-scale(logy,scale = TRUE)
+heatmap.2(sclogy)
+View(sclogy)
+y1<-sclogy
+heatmap.2(y1)
+heatmap.2(logy)
+heatmap.2(y)
+par(oma=c(1,15,1,1))
+heatmap.2(y)
+heatmap.2(logffpn1)
+heatmap.2(ffpn1)
+heatmap.2(y)
+View(ffpn1)
+View(logffpn1)
+plot(logy)
+heatmap.2(logy)
+View(logy)
+par(oma=c(1,15,1,1))
+heatmap.2(logy)
+plot(logy)
+heatmap.2(y)
+heatmap.2(logy)
+heatmap.2(sclogy)
+heatmap.2(y1)
+heatmap.2(y)
+View(ffpn1)
+View(logffpn1)
+View(logmymatrix)
+View(logy)
+library(gplots)
+library(heatmap.plus)
+library(RColorBrewer)
+heatmap.2(logffpn1)
+heatmap.2(y)
+heatmap.2(logffpn1)
+heatmap.2(logy)
+heatmap.2(y1)
+heatmap.2(sclogy)
+y2<-data.matrix(logffpn1)
+heatmap.2(y2)
+par(oma=c(1,15,1,1))
+heatmap.2(y2)
+ymatrix<-as.matrix(logffpn1)
+head(ymatrix)
+library(ComplexHeatmap)
+fontsize <- 0.6
+Heatmap(ymatrix, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+Heatmap(y2, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+Heatmap(sc_logmymatrix, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+Heatmap(sc_logy, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+Heatmap(y, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+Heatmap(ymatrix,
+cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize),
+row_hclust_width = unit(3, "cm"),
+clustering_distance_rows ="maximum",
+clustering_method_rows = "ward.D")
+Heatmap(ymatrix,
+cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize),
+row_hclust_width = unit(3, "cm"),
+clustering_distance_rows ="maximum",
+clustering_method_rows = "pearson")
+Heatmap(ymatrix,
+cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize),
+row_hclust_width = unit(3, "cm"),
+clustering_distance_rows ="spearman",
+clustering_method_rows = "ward.D")
+Heatmap(ymatrix,
+cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize),
+row_hclust_width = unit(3, "cm"),
+clustering_distance_rows ="euclidean",
+clustering_method_rows = "ward.D")
+View(ffpn1)
+View(logffpn1)
+View(logmymatrix)
+View(logy)
+View(logffpn1)
+Heatmap(logffpn1,
++         cluster_columns=FALSE,
++         row_names_side = "left",
++         row_hclust_side = "left",
++         row_names_gp=gpar(cex=fontsize),
++         row_hclust_width = unit(3, "cm"),
++         clustering_distance_rows ="euclidean",
++         clustering_method_rows = "ward.D")
+y3<-as.matrix(logffpn1)
+View(y3)
+Heatmap(y3,
++         cluster_columns=FALSE,
++         row_names_side = "left",
++         row_hclust_side = "left",
++         row_names_gp=gpar(cex=fontsize),
++         row_hclust_width = unit(3, "cm"),
++         clustering_distance_rows ="euclidean",
++         clustering_method_rows = "ward.D")
+Heatmap(y3,
++
++         row_names_gp=gpar(cex=fontsize),
++         row_hclust_width = unit(3, "cm"),
++         clustering_distance_rows ="euclidean",
++         clustering_method_rows = "ward.D")
+Heatmap(sc_logmymatrix,
++         cluster_columns=FALSE,
++         row_names_side = "left",
++         row_hclust_side = "left",
++         row_names_gp=gpar(cex=fontsize),
++         row_hclust_width = unit(3, "cm"),
++         clustering_distance_rows ="euclidean",
++         clustering_method_rows = "ward.D")
+Heatmap(y,
++         cluster_columns=FALSE,
++         row_names_side = "left",
++         row_hclust_side = "left",
++         row_names_gp=gpar(cex=fontsize),
++         row_hclust_width = unit(3, "cm"),
++         clustering_distance_rows ="euclidean",
++         clustering_method_rows = "ward.D")
+library(ComplexHeatmap)
+library(readxl)
+Ct_for_plasma_for_heatmap <- read_excel("C:/Users/smandal/Downloads/Ct for plasma for heatmap.xlsx")
+View(Ct_for_plasma_for_heatmap)
+plasdatanew<-Ct_for_plasma_for_heatmap
+head(plasdatanew)
+plamatrix<-as.matrix(plasdatanew[-2,c(3;14)])
+plamatrix<-as.matrix(plasdatanew[-2,c(3:14)])
+View(plamatrix)
+View(plasdatanew)
+View(plamatrix)
+plamatrix<-as.matrix(plasdatanew[-2,c(2:43)])
+View(plamatrix)
+View(plasdatanew)
+plamatrix<-as.matrix(plasdatanew[-2,c(3:43)])
+View(plamatrix)
+fontsize <- 0.6
+Heatmap(plamatrix, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+)
+))))
+>
+row.names(plasdatanew)<plasdatanew$miRNA
+plasdatanew<-plasdatanew[2.43]
+plasdatanew<-plasdatanew[c(2:43)]
+View(plasdatanew)
+plamatrix<-as.matrix(plasdatanew[-2,c(3:43)])
+plamatrix<-as.matrix(plasdatanew[-2,])
+View(plamatrix)
+Heatmap(plamatrix, cluster_columns=FALSE,
++         row_names_side = "left",
++         row_hclust_side = "left",
++         row_names_gp=gpar(cex=fontsize))
+library(ComplexHeatmap)
+library(readxl)
+Ct_for_plasma_for_heatmap <- read_excel("C:/Users/smandal/Downloads/Ct for plasma for heatmap.xlsx")
+View(Ct_for_plasma_for_heatmap)
+pldnew<-Ct_for_plasma_for_heatmap
+row.names(pldnew)<-pldnew$miRNA
+pldmatriX<-as.matrix([,c(2:43)])
+pldmatriX<-as.matrix(pldnew[,c(2:43)])
+head(pldmatriX)
+fontsize <- 0.6
+View(pldmatriX)
+View(pldmatriX)
+Heatmap(pldmatrix, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+Heatmap(pldmatrix, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+heatmap(pldmatriX)
+View(pldnew)
+pldmatriX<-as.matrix(pldnew[,c(3:43)])
+Heatmap(pldmatrix, cluster_columns=FALSE,
++         row_names_side = "left",
++         row_hclust_side = "left",
++         row_names_gp=gpar(cex=fontsize))
+View(pldmatriX)
+pldmatriX<-as.matrix(pldnew[,c(2:43)])
+View(pldmatriX)
+Heatmap(pldmatrix, cluster_columns=FALSE,
+row_names_side = "left",
+row_hclust_side = "left",
+row_names_gp=gpar(cex=fontsize))
+View(pldnew)
+plmatrix<-as.matrix(pldnew[,-2])
+View(plmatrix)
+View(pldnew)
+View(plmatrix)
+View(pldnew)
+plmatrix<-as.matrix(pldnew[,-3])
+View(plmatrix)
+View(pldnew)
+plmatrix<-as.matrix(pldnew[,c(3:43)])
+View(plmatrix)
+plmatrix<-as.matrix(pldnew[,c(2:43)])
+View(plmatrix)
+Heatmap(plmatrix, cluster_columns=FALSE,
++         row_names_side = "left",
++         row_hclust_side = "left",
++         row_names_gp=gpar(cex=fontsize))
+View(pldnew)
+plmatrix<-as.matrix(pldnew[,c(2:43)])
+View(plmatrix)
+Heatmap(plmatrix)
+plmatrix<-as.matrix(pldnew)
+View(pldnew)
+View(pldnew)
+heatmap(plmatrix)
+pldnew<-pldnew[-pldnew$Well]
+pldnew<-pldnew[,-pldnew$Well]
+pldnew<-pldnew[,-2]
+View(pldnew)
+pldnew<-pldnew[,-1]
+View(pldnew)
+pladnew<-Ct_for_plasma_for_heatmap
+View(pladnew)
+pladnew<-pladnew[.c(2:43)]
+pladnew<-pladnew[,c(2:43)]
+row.names(pladnew)<-pladnew$miRNA
+pladnew<-pladnew[1:13,-1]
+View(pladnew)
+> row.names(pladnew)<-pladnew$miRNA
+pladnew<-Ct_for_plasma_for_heatmap
+pladnew<-pladnew[,c(2:43)]
+row.names(pladnew)<-pladnew$miRNA
+View(pldnew)
+View(pldnew)
+View(pladnew)
+View(pladnew)
+pladnew<-pladnew[1:13,-1]
+View(pladnew)
+View(Ct_for_plasma_for_heatmap)
+pldnew1<-Ct_for_plasma_for_heatmap
+View(pldnew1)
+pldnew1<-pldnew1[,-1]
+row.names(pldnew1)<-pldnew1$miRNA
+pldnew1<-pldnew1[,-1]
+pldnew1<-pldnew1[,+1]
+pldnew1<-Ct_for_plasma_for_heatmap
+pldnew1<-pldnew1[,-1]
+row.names(pldnew1)<-pldnew1$miRNA
+View(pldnew1)
+pldnew1<-pldnew1[1:13,c(2:43)]
+pldnew1<-pldnew1[1:13,c(2:42)]
+pldnew1<-pldnew1[1:13,c(1:42)]
+library(readxl)
+Data_for_heatmap_to_Sanjay_FFPE_8_9 <- read_excel("C:/Users/smandal/Desktop/Data for heatmap to Sanjay_FFPE_8.9.xlsx")
+View(Data_for_heatmap_to_Sanjay_FFPE_8_9)
+head(FFP89)
+library(readxl)
+Data_for_heatmap_to_Sanjay_FFPE_8_9 <- read_excel("C:/Users/smandal/Desktop/Data for heatmap to Sanjay_FFPE_8.9.xlsx")
+View(Data_for_heatmap_to_Sanjay_FFPE_8_9)
+FFP89<-Data_for_heatmap_to_Sanjay_FFPE_8_9
+FFP89matrix<-as.matrix(FFP89[,c(2:42)])
+heatmap(FFP89matrix)
+library(ComplexHeatmap)
+Heatmap(FFP89matrix)
+library(readxl)
+Plasma_raw_Ct_counts_for_with_key_8_9 <- read_excel("C:/Users/smandal/Desktop/Plasma raw Ct counts for with key_8.9.xls")
+View(Plasma_raw_Ct_counts_for_with_key_8_9)
+Plasma89<-Plasma_raw_Ct_counts_for_with_key_8_9
+Plasma89matrix<-as.matrix(Plasma89[,c(2:42)])
+Heatmap(Plasma89matrix)
+View(Cerebsample)
+library(heatmap.plus)
+ffpmatrix<-as.matrix(t.ffpdata)
+)
